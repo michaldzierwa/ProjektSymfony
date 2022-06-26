@@ -1,4 +1,28 @@
 {
+    "amphp/amp": {
+        "version": "v2.6.2"
+    },
+    "amphp/byte-stream": {
+        "version": "v1.8.1"
+    },
+    "behat/transliterator": {
+        "version": "v1.5.0"
+    },
+    "composer/package-versions-deprecated": {
+        "version": "1.11.99.5"
+    },
+    "composer/pcre": {
+        "version": "3.0.0"
+    },
+    "composer/semver": {
+        "version": "3.3.2"
+    },
+    "composer/xdebug-handler": {
+        "version": "3.0.3"
+    },
+    "dnoegel/php-xdg-base-dir": {
+        "version": "v0.1.1"
+    },
     "doctrine/annotations": {
         "version": "1.13",
         "recipe": {
@@ -20,6 +44,9 @@
     "doctrine/common": {
         "version": "3.3.0"
     },
+    "doctrine/data-fixtures": {
+        "version": "1.5.3"
+    },
     "doctrine/dbal": {
         "version": "3.3.6"
     },
@@ -38,6 +65,18 @@
             "./config/packages/doctrine.yaml",
             "./src/Entity/.gitignore",
             "./src/Repository/.gitignore"
+        ]
+    },
+    "doctrine/doctrine-fixtures-bundle": {
+        "version": "3.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "3.0",
+            "ref": "1f5514cfa15b947298df4d771e694e578d4c204d"
+        },
+        "files": [
+            "./src/DataFixtures/AppFixtures.php"
         ]
     },
     "doctrine/doctrine-migrations-bundle": {
@@ -80,8 +119,38 @@
     "egulias/email-validator": {
         "version": "3.2"
     },
+    "fakerphp/faker": {
+        "version": "v1.19.0"
+    },
+    "felixfbecker/advanced-json-rpc": {
+        "version": "v3.2.1"
+    },
+    "felixfbecker/language-server-protocol": {
+        "version": "v1.5.2"
+    },
+    "friendsofphp/php-cs-fixer": {
+        "version": "3.8",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "3.0",
+            "ref": "be2103eb4a20942e28a6dd87736669b757132435"
+        },
+        "files": [
+            "./.php-cs-fixer.dist.php"
+        ]
+    },
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.12"
+    },
+    "gedmo/doctrine-extensions": {
+        "version": "v3.7.0"
+    },
+    "knplabs/knp-components": {
+        "version": "v3.5.0"
+    },
+    "knplabs/knp-paginator-bundle": {
+        "version": "v5.8.0"
     },
     "laminas/laminas-code": {
         "version": "4.5.1"
@@ -92,14 +161,23 @@
     "myclabs/deep-copy": {
         "version": "1.11.0"
     },
+    "netresearch/jsonmapper": {
+        "version": "v4.0.0"
+    },
     "nikic/php-parser": {
         "version": "v4.14.0"
+    },
+    "openlss/lib-array2xml": {
+        "version": "1.0.0"
     },
     "phar-io/manifest": {
         "version": "2.0.3"
     },
     "phar-io/version": {
         "version": "3.2.1"
+    },
+    "php-cs-fixer/diff": {
+        "version": "v2.0.2"
     },
     "phpdocumentor/reflection-common": {
         "version": "2.2.0"
@@ -144,6 +222,12 @@
             "./phpunit.xml.dist",
             "./tests/bootstrap.php"
         ]
+    },
+    "psalm/plugin-phpunit": {
+        "version": "0.16.1"
+    },
+    "psalm/plugin-symfony": {
+        "version": "v3.1.5"
     },
     "psr/cache": {
         "version": "2.0.0"
@@ -218,6 +302,18 @@
         },
         "files": [
             "./config/packages/sensio_framework_extra.yaml"
+        ]
+    },
+    "stof/doctrine-extensions-bundle": {
+        "version": "1.7",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.2",
+            "ref": "e805aba9eff5372e2d149a9ff56566769e22819d"
+        },
+        "files": [
+            "./config/packages/stof_doctrine_extensions.yaml"
         ]
     },
     "symfony/asset": {
@@ -579,10 +675,22 @@
     "twig/extra-bundle": {
         "version": "v3.4.0"
     },
+    "twig/intl-extra": {
+        "version": "v3.4.0"
+    },
     "twig/twig": {
         "version": "v3.4.1"
     },
+    "vimeo/psalm": {
+        "version": "4.23.0"
+    },
     "webmozart/assert": {
         "version": "1.10.0"
+    },
+    "webmozart/path-util": {
+        "version": "2.3.0"
+    },
+    "weirdan/doctrine-psalm-plugin": {
+        "version": "v2.3.0"
     }
 }

@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'title.comment_list'|trans }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'title.comment_list'|trans }}</h1>
+    {% if commentPagination is defined and commentPagination.items|length %}
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(commentPagination) }}
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ knp_pagination_sortable(commentPagination, 'label.id'|trans, 'comment.id') }}</th>
+                <th>{{ knp_pagination_sortable(commentPagination, 'label.created_at'|trans, 'comment.createdAt') }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for comment in commentPagination.items %}
+                <tr>
+                    <td>{{ comment.id }}</td>
+                    <td>{{ comment.createdAt|format_date('long') }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="navigation text-center">
+            {{ knp_pagination_render(commentPagination) }}
+        </div>
+        <p>
+            <a href="{{ url('post_index') }}" title="{{ 'action.show_post_list'|trans }}">
+                {{ 'action.show_post_list'|trans }}
+            </a>
+        </p>
+    {% else %}
+        <p>
+            {% include 'default/_single_alert_message.html.twig' with {
+                type: 'warning',
+                message: 'message.empty_list'|trans
+            } %}
+        </p>
+    {% endif %}
+{% endblock %}
